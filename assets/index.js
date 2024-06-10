@@ -59,7 +59,7 @@ const services = new Swiper(".cards-swiper", {
           spaceBetween: 20,
         },
         768: {
-          slidesPerView: 3,
+          slidesPerView: 2,
           spaceBetween: 40,
         },
         992: {
@@ -109,12 +109,12 @@ async function comeinfo() {
 
     const blog = document.getElementById('blog');
 
-    for (let k = 0; k < info.length; k++) {
+    for (let k = 0; k < 10; k++) {
       blog.innerHTML += `
         <div class="blog">
           <p><span id="date">April 16, 2021</span><span id="time">.6 mins</span></p>
           <h2 class="py-2">${info[k].title}</h2>
-          <a href="#">Read the article <img class="px-4" src="./assets/pictures/section5-blogs/ox-white.svg" alt=""></a>
+          <a href="#">Read the article <img class="px-4 py-4" src="./assets/pictures/section5-blogs/ox-white.svg" alt=""></a>
         </div>`;
     }
   } catch (error) {
@@ -122,6 +122,18 @@ async function comeinfo() {
   }
 }
 
+// section 6 -- testimonials
+
+
+const about = new Swiper(".about-swp ", {
+  pagination: {
+    el: ".swiper-pagination",
+  },
+  navigation: {
+    nextEl: ".test-next-btn",
+    prevEl: ".test-prev-btn",
+  },
+});
 
 
 
